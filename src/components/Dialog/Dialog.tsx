@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ImageKit from "imagekit"
+// import ImageKit from "imagekit"
 
 // Contenful
 import { PlainClientAPI } from "contentful-management"
@@ -74,7 +74,7 @@ const Dialog = (props: DialogProps) => {
   const urlEndpoint = installationParameters.imageKitPublicKey || ""
   const verified = !!installationParameters.successfullyVerified
 
-  const imagekit = new ImageKit({ publicKey, privateKey, urlEndpoint })
+  // const imagekit = new ImageKit({ publicKey, privateKey, urlEndpoint })
 
   // State
   const [allSources, setAllSources] = useState<any[]>([])

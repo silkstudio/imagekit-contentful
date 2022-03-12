@@ -9,7 +9,7 @@ export interface AppInstallationParameters {}
 interface ConfigScreenProps {
   sdk: AppExtensionSDK
   cma: PlainClientAPI
-}
+} 
 
 export interface AppInstallationParameters {
   imageKitPublicKey?: string
