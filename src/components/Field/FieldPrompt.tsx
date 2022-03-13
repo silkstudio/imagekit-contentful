@@ -1,5 +1,4 @@
 import React from "react"
-import { ReactElement } from "react"
 import { Button, Flex } from "@contentful/f36-components"
 
 interface FieldPromptProps {
@@ -7,18 +6,11 @@ interface FieldPromptProps {
   updateHeight: Function
 }
 
-const FieldPrompt = ({
-  openDialog,
-  updateHeight,
-}: FieldPromptProps): ReactElement => {
-  updateHeight(150)
+const FieldPrompt: React.FC<FieldPromptProps> = ({ openDialog, updateHeight }) => {
+  updateHeight(32 + 32 + 40 + 4)
   return (
     <Flex alignItems="center" justifyContent="center" fullHeight>
-      <Button
-        className="ix-add-image-button"
-        endIcon={<>+</>}
-        onClick={() => openDialog()}
-      >
+      <Button endIcon={<>+</>} onClick={() => openDialog()}>
         Add An Origin Image
       </Button>
     </Flex>
