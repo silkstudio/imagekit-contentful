@@ -1,38 +1,55 @@
-import { Button, Flex } from "@contentful/f36-components"
+import React from "react"
 
+import * as S from "./styles"
+
+// Components
+import { Button, Flex, AssetCard } from "@contentful/f36-components"
+
+// Types
+import type { ImageKitAsset } from "../../types/imagekit"
+
+// Interfaces
 interface FieldImagePreviewProps {
-  imagePath: string
+  asset: ImageKitAsset
   updateHeight: Function
   openDialog: Function
   clearSelection: Function
 }
 
-const FieldPreview: React.FC<FieldImagePreviewProps> = ({
-  imagePath,
-  openDialog,
-  updateHeight,
-  clearSelection,
-}) => {
-  updateHeight(311)
+/*
+
+
+
+
+
+
+
+
+*/
+
+const FieldPreview: React.FC<FieldImagePreviewProps> = ({ asset, updateHeight, openDialog, clearSelection }) => {
+  updateHeight(32 + 32 + 266.67 + 20 + 16 + 20 + 16 + 40 + 4)
   return (
-    <Flex>
-      <div className="ix-field-image-preview-buttons">
-        <Button
-          className="ix-field-image-preview-buttons-replace"
-          endIcon={<>+</>}
+    <Flex alignItems="center" justifyContent="center" fullHeight gap="16px" flexDirection="column">
+      <S.AssetContainer>
+        <AssetCard
+          src={asset.url}
+          title={asset.name}
+          type="image"
+          status="published"
+          className="ik-asset-card"
           onClick={() => openDialog()}
-        >
+        />
+      </S.AssetContainer>
+      <em>{asset.filePath}</em>
+      <Flex alignItems="center" justifyContent="center" fullHeight gap="8px">
+        <Button endIcon={<>+</>} onClick={() => openDialog()}>
           Replace
         </Button>
-        <Button
-          className="ix-field-image-preview-buttons-remove"
-          endIcon={<>-</>}
-          //   buttonType="negative"
-          onClick={() => clearSelection()}
-        >
+        <Button endIcon={<>-</>} onClick={() => clearSelection()}>
           Remove
         </Button>
-      </div>
+      </Flex>
     </Flex>
   )
 }
