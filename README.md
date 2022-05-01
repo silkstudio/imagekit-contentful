@@ -1,49 +1,44 @@
 # Contentful ImageKit
 
-Use the ImageKit UI to manage images in contenful.
+Use the ImageKit UI to manage images in contentful.
+
+[![Install to Contentful](https://www.ctfstatic.com/button/install-small.svg)](https://app.contentful.com/deeplink?link=apps&id=5PDydcyTxQy4RCNmY18RDR)
 
 <br/>
+
+## Installation
+
+To install the app: 
+
+1. Head to the [installation link](https://app.contentful.com/deeplink?link=apps&id=5PDydcyTxQy4RCNmY18RDR)
+2. Select the `space` and `environment` where you want the app to be installed
+3. Authorize access for the app
+4. You should now see the app listed under `installed`
+
+![install](https://user-images.githubusercontent.com/97189204/166159432-20487691-0419-43d7-b058-977f8fd5f537.gif)
+
 <br/>
+
+## Usage _(within a content model)_
+
+To add the app to a given content model:
+
+1. Add a new field
+2. Select `JSON object`
+3. Provide an appropriote name and id, then click `Create and configure`
+4. Under the appearance tab, select `ImageKit`
+
+![add-field](https://user-images.githubusercontent.com/97189204/166159566-03d76c0b-5ceb-4da7-a2ad-ef6d0f734b99.gif)
+
 <br/>
-<br/>
-<br/>
 
-## Development
+## Usage _(within an entry)_
 
-This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
+To use the app within an entry: 
 
-In the project directory, you can run:
+1. Click on `Add an origin image +`
+2. Sign in to ImageKit if prompted
+3. Select your image or upload a new one
+4. Click `insert`
 
-#### `yarn start`
 
-Creates or updates your app definition in Contentful, and runs the app in development mode.
-Open your app to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-#### `yarn build`
-
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-#### `yarn run upload`
-
-Uploads the build folder to contentful and creates a bundle that is automatically activated.
-The command guides you through the deployment process and asks for all required arguments.
-Read [here](https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/#deploy-with-contentful) for more information about the deployment process.
-
-#### `yarn run upload-ci`
-
-Similar to `npm run upload` it will upload your app to contentful and activate it. The only difference is   
-that with this command all required arguments are read from the environment variables, for example when you add
-the upload command to your CI pipeline.
-
-For this command to work, the following environment variables must be set: 
-
-- `CONTENTFUL_ORG_ID` - The ID of your organization
-- `CONTENTFUL_APP_DEF_ID` - The ID of the app to which to add the bundle
-- `CONTENTFUL_ACCESS_TOKEN` - A personal [access token](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/personal-access-tokens)
