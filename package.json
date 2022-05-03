@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "upload:dev": "dotenv -- cross-var contentful-app-scripts upload --ci --bundle-dir ./build  --organization-id %CONTENTFUL_ORG_ID% --definition-id %DEV_CONTENTFUL_APP_DEF_ID% --token %CONTENTFUL_ACCESS_TOKEN%",
+    "upload:dev": "dotenv -- cross-var contentful-app-scripts upload --ci --bundle-dir ./build  --organization-id %CONTENTFUL_ORG_ID% --definition-id %DEV_CONTENTFUL_APP_DEF_ID% --token %CONTENTFUL_ACCESS_TOKEN% --skip-activation",
     "upload:prod": "dotenv -- cross-var contentful-app-scripts upload --ci --bundle-dir ./build  --organization-id %CONTENTFUL_ORG_ID% --definition-id %PROD_CONTENTFUL_APP_DEF_ID% --token %CONTENTFUL_ACCESS_TOKEN%"
   },
   "eslintConfig": {
