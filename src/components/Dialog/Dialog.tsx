@@ -51,7 +51,7 @@ const Dialog: React.FC<Props> = ({ sdk }) => {
         }
       )
     }
-  }, [])
+  }, [sdk])
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
