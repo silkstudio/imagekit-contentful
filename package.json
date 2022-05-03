@@ -1,6 +1,6 @@
 {
-  "name": "imagekit",
-  "version": "0.1.0",
+  "name": "imagekit-contentful",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "cross-env BROWSER=none react-scripts start",
