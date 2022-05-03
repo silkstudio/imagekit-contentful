@@ -1,4 +1,4 @@
-# Contentful ImageKit
+# ImageKit Contentful
 
 Use the ImageKit UI to manage images in contentful.
 
