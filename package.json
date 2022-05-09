@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "@contentful/app-sdk": "^4.3.5",
+    "@contentful/app-sdk": "^4.3.7",
     "@contentful/f36-components": "^4.0.43",
     "@contentful/f36-tokens": "^4.0.1",
     "@emotion/css": "^11.9.0",
